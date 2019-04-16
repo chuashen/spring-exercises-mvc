@@ -33,9 +33,12 @@ public class ProxyApp {
 
 //        invokeLogE();
 //        invokeLogI();
-
+//
         UserService userService = (UserService) ProxyUtil.newInstance(new UserServiceImpl());
         userService.getUserInfoByNo("hake");
+
+//        System.out.println(ProxyApp.class.getResourceAsStream("/"));
+        System.out.println(ProxyApp.class.getResource("").getFile());
 
     }
 
